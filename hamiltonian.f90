@@ -1048,7 +1048,7 @@
 
         endif
 
-        hamiinteract=-couplings**2*2/3/Pplus**2*(V12+V13+V23)
+        hamiinteract=-couplings**2*2/3/Pplus*(V12+V13+V23)
 
         if(Abs(hamiinteract).gt.epsilon(Abs(hamiinteract)))then
           j_nz_inst(nz)=j
@@ -1299,9 +1299,9 @@ subroutine hamiltonianinteractqtoqg(nmax2,Mj,Kt,i_nz_vcvqtqg,j_nz_vcvqtqg,hamilt
     mass1(1)=Mu4_DEFAULT
     mass1(2)=Md4_DEFAULT
     mass1(3)=MS4_DEFAULT
-    mass2(1)=Mu2_DEFAULT
-    mass2(2)=Md2_DEFAULT
-    mass2(3)=MS2_DEFAULT
+    mass2(1)=Mu4_DEFAULT
+    mass2(2)=Md4_DEFAULT
+    mass2(3)=MS4_DEFAULT
     mass2(4)=Mg2_DEFAULT
 
     couplings=coupling3
@@ -2773,7 +2773,7 @@ subroutine hamiltoniankinetic5p(nmax2,Mj,Kt,i_nzk3,j_nzk3,hamiltoniankineticvalu
             V33=0.D0
           endif
 
-          hamiinteract=-couplings/Pplus**2*(V11+V22+V33)
+          hamiinteract=-couplings/Pplus*(V11+V22+V33)
 
           if(Abs(hamiinteract).gt.epsilon(Abs(hamiinteract)))then
 
